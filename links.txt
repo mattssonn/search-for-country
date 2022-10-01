@@ -1,0 +1,6 @@
+https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca/hub/rest-countries-api-with-color-theme-switcher-abbZJjGVex
+
+https://restcountries.com/v3.1/all
+
+https://restcountries.com/#api-endpoints-v3-all
+
