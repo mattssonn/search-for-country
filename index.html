@@ -2,25 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="content">
+      <h2 id="heading">Where in the world?</h2>
+      <button>Dark mode</button>
+    </div>
+
+    <div id="country-container">
       <div id="search-and-filter">
         <input placeholder="search for country..." type="text" id="search" />
-        <button id="dropBtn"></button>
-        <div class="dropdown-content">
-          <a href="#">Link1</a>
-          <a href="#">Link2</a>
-          <a href="#">Link3</a>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content">
+            <input
+              type="text"
+              placeholder="Search.."
+              id="myInput"
+              onkeyup="filterFunction()"
+            />
+            <p class="filterBtn" id="europe">Europe</p>
+            <p class="filterBtn" id="asia">Asia</p>
+            <p class="filterBtn" id="americas">Americas</p>
+            <p class="filterBtn" id="africa">Africa</p>
+            <p class="filterBtn" id="antractic">Antractic</p>
+            <p class="filterBtn" id="oceania">Oceania</p>
+          </div>
         </div>
       </div>
-
-      <div id="country-container"></section>
-    </section>
+    </div>
 
     <script src="script.js"></script>
   </body>
