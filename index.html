@@ -6,35 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Montserrat:ital,wght@0,300;0,500;0,600;1,200;1,300&family=Noto+Sans+Mono&family=Nunito+Sans:wght@300;600;800&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
   </head>
   <body>
+    <div class="header">
     <div id="content">
       <h2 id="heading">Where in the world?</h2>
-      <button>Dark mode</button>
+      <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
     </div>
+  </div>
 
-    <div id="country-container">
-      <div id="search-and-filter">
-        <input placeholder="search for country..." type="text" id="search" />
-        <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-          <div id="myDropdown" class="dropdown-content">
-            <input
-              type="text"
-              placeholder="Search.."
-              id="myInput"
-              onkeyup="filterFunction()"
-            />
-            <p class="filterBtn" id="europe">Europe</p>
-            <p class="filterBtn" id="asia">Asia</p>
-            <p class="filterBtn" id="americas">Americas</p>
-            <p class="filterBtn" id="africa">Africa</p>
-            <p class="filterBtn" id="antractic">Antractic</p>
-            <p class="filterBtn" id="oceania">Oceania</p>
+    <div id="search-and-filter">
+      <div id="search-and-submit">
+        <input placeholder="Search for country..." type="text" id="search" />
+      </div>
+      <div class="dropdown">
+        <div class="select">
+          <span class="selected">Filter by region</span>
+          <div class="caret"></div>
           </div>
+          <ul class="menu">
+            <li>Europe</li>
+            <li>Asia</li>
+            <li>Americas</li>
+            <li>Africa</li>
+            <li class="active">Antarctic</li>
+            <li>Oceania</li>
+          </ul>
         </div>
       </div>
     </div>
+    <div id="country-container"></div>
 
     <script src="script.js"></script>
   </body>
