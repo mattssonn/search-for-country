@@ -12,7 +12,6 @@ body {
   background-color: #fff;
   display: flex;
   justify-content: center;
-  padding: 0px 120px;
 }
 #content {
   display: flex;
@@ -29,6 +28,9 @@ body {
 #heading {
   font-size: 40px;
   font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* #submit {
@@ -54,7 +56,7 @@ body {
 }
 
 #search-and-submit {
-  margin: 0px 30px;
+  /* margin: 0px 30px; */
 }
 
 #search {
@@ -66,7 +68,7 @@ body {
   text-align: start;
   border: 2px solid #fff;
   border-radius: 6px;
-  margin: 10px auto;
+  /* margin: 10px 0px 10px 35px; */
   padding: 10px 30px;
 }
 
@@ -78,27 +80,30 @@ body {
 #country-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 80px;
+  grid-gap: 80px;
   margin: 10px auto;
   max-width: 90vw;
   border: none;
 }
 
-section {
+.countryInfo {
   display: flex;
   flex-direction: column;
-  /* margin: 10px auto; */
   background-color: white;
   box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.25);
-  /* width: 18%; */
   border-radius: 6px;
 }
-h3 {
-  padding: 10px 20px;
+h2 {
+  padding: 0px 0px 15px 45px;
+  font-weight: 900;
 }
 p {
-  padding: 10px 20px;
+  padding-left: 45px;
   color: rgb(75, 75, 75);
+  margin-top: 5px;
+}
+.text-container {
+  margin-bottom: 40px;
 }
 img {
   object-fit: cover;
@@ -111,15 +116,17 @@ img {
   box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.25);
 }
 .img-container {
-  /* height: 300px; */
+  height: 250px;
+  margin-bottom: 1px;
 }
 
 /* -----------------------------------------------------------*/
 
 .dropdown {
   height: 60%;
+  /* width: 100%; */
   min-width: 12em;
-  margin: 0 30px;
+  /* margin: 0 30px; */
   position: relative;
   /* margin: 1em; */
 }
@@ -219,8 +226,13 @@ i:hover {
   transition: 0.3s;
 }
 
-@media only screen and (max-width: 1000) {
-  input.search {
-    display: none;
+@media only screen and (min-width: 1000) {
+  .country-container {
+    grid-template-areas: "country country";
+    /* grid-template-columns: repeat(2, 1fr); */
+  }
+  #search-and-filter {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

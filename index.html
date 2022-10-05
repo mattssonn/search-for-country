@@ -18,7 +18,7 @@
   <body>
     <div class="header">
       <div id="content">
-        <h2 id="heading">Where in the world?</h2>
+        <h1 id="heading">Where in the world?</h1>
         <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
       </div>
     </div>
@@ -27,17 +27,18 @@
       <div id="search-and-submit">
         <input placeholder="Search for country..." type="text" id="search" />
       </div>
+
       <div class="dropdown">
         <div class="select">
           <span class="selected">Filter by region</span>
           <div class="caret"></div>
         </div>
         <ul class="menu">
-          <li onclick="getData('europe');">Europe</li>
+          <li class="active" onclick="getData('europe');">Europe</li>
           <li onclick="getData('asia');">Asia</li>
           <li onclick="getData('americas');">Americas</li>
           <li onclick="getData('africa');">Africa</li>
-          <li class="active" onclick="getData('antarctic');">Antarctic</li>
+          <li onclick="getData('antarctic');">Antarctic</li>
           <li onclick="getData('oceania');">Oceania</li>
         </ul>
       </div>
