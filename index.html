@@ -17,11 +17,11 @@
   </head>
   <body>
     <div class="header">
-    <div id="content">
-      <h2 id="heading">Where in the world?</h2>
-      <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+      <div id="content">
+        <h2 id="heading">Where in the world?</h2>
+        <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+      </div>
     </div>
-  </div>
 
     <div id="search-and-filter">
       <div id="search-and-submit">
@@ -31,16 +31,15 @@
         <div class="select">
           <span class="selected">Filter by region</span>
           <div class="caret"></div>
-          </div>
-          <ul class="menu">
-            <li>Europe</li>
-            <li>Asia</li>
-            <li>Americas</li>
-            <li>Africa</li>
-            <li class="active">Antarctic</li>
-            <li>Oceania</li>
-          </ul>
         </div>
+        <ul class="menu">
+          <li onclick="getData('europe');">Europe</li>
+          <li onclick="getData('asia');">Asia</li>
+          <li onclick="getData('americas');">Americas</li>
+          <li onclick="getData('africa');">Africa</li>
+          <li class="active" onclick="getData('antarctic');">Antarctic</li>
+          <li onclick="getData('oceania');">Oceania</li>
+        </ul>
       </div>
     </div>
     <div id="country-container"></div>
