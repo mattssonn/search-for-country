@@ -1,6 +1,7 @@
 const input = document.getElementById("search");
 const toggle = document.getElementById("toggleDark");
 const body = document.getElementById("body");
+const countryContainer = document.getElementById("country-container");
 
 async function getData(continent) {
   console.log(continent);
@@ -12,9 +13,10 @@ async function getData(continent) {
       : "/all"
   }`;
 
+  countryContainer.innerHTML = '<div class="spinner"></div>';
+
   const response = await fetch(url);
   const data = await response.json();
-  const countryContainer = document.getElementById("country-container");
 
   console.log(data);
   countryContainer.innerHTML = "";
@@ -43,11 +45,11 @@ async function getData(continent) {
 
     img.src = data[i].flags.png;
     countryName.innerText = data[i].name.common;
-    population.innerHTML = `<span style="color: #000; font-weight: 900">Population:</span> ${parseInt(
+    population.innerHTML = `<span style="font-weight: 900">Population:</span> ${parseInt(
       data[i].population
     ).toLocaleString()}`;
-    region.innerHTML = `<span style="color: #000; font-weight: 900">Region:</span> ${data[i].region}`;
-    capitalCity.innerHTML = `<span style="color: #000; font-weight: 900">Capital city:</span> ${data[i].capital}`;
+    region.innerHTML = `<span style="font-weight: 900">Region:</span> ${data[i].region}`;
+    capitalCity.innerHTML = `<span style="font-weight: 900">Capital city:</span> ${data[i].capital}`;
   }
 }
 
