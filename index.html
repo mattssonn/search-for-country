@@ -19,31 +19,36 @@
     <div class="header">
       <div id="content">
         <h1 id="heading">Where in the world?</h1>
-        <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+        <label>
+          <input id="checkbox" type="checkbox" />
+          <span class="check"></span>
+        </label>
       </div>
     </div>
 
-    <div id="search-and-filter">
-      <div id="search-and-submit">
-        <input placeholder="Search for country..." type="text" id="search" />
-      </div>
-
-      <div class="dropdown">
-        <div class="select">
-          <span class="selected">Filter by region</span>
-          <div class="caret"></div>
+    <div class="search-and-country">
+      <div id="search-and-filter">
+        <div id="search-and-submit">
+          <input placeholder="Search for country..." type="text" id="search" />
         </div>
-        <ul class="menu">
-          <li onclick="getData('europe');">Europe</li>
-          <li onclick="getData('asia');">Asia</li>
-          <li onclick="getData('americas');">Americas</li>
-          <li onclick="getData('africa');">Africa</li>
-          <li onclick="getData('antarctic');">Antarctic</li>
-          <li onclick="getData('oceania');">Oceania</li>
-        </ul>
+
+        <div class="dropdown">
+          <div class="select">
+            <span class="selected">Filter by region</span>
+            <div class="caret"></div>
+          </div>
+          <ul class="menu">
+            <li onclick="getData('europe');">Europe</li>
+            <li onclick="getData('asia');">Asia</li>
+            <li onclick="getData('americas');">Americas</li>
+            <li onclick="getData('africa');">Africa</li>
+            <li onclick="getData('antarctic');">Antarctic</li>
+            <li onclick="getData('oceania');">Oceania</li>
+          </ul>
+        </div>
       </div>
+      <div id="country-container"></div>
     </div>
-    <div id="country-container"></div>
 
     <script src="script.js"></script>
   </body>

@@ -40,29 +40,15 @@ async function getData(continent) {
     textContainer.appendChild(capitalCity);
     div.appendChild(imgContainer);
     div.appendChild(textContainer);
-    // div.appendChild(countryName);
-    // div.appendChild(population);
-    // div.appendChild(region);
-    // div.appendChild(capitalCity);
 
     img.src = data[i].flags.png;
     countryName.innerText = data[i].name.common;
-    population.innerHTML = `<span style="color: #000; font-weight: 900">Population:</span> ${data[i].population}`;
+    population.innerHTML = `<span style="color: #000; font-weight: 900">Population:</span> ${parseInt(
+      data[i].population
+    ).toLocaleString()}`;
     region.innerHTML = `<span style="color: #000; font-weight: 900">Region:</span> ${data[i].region}`;
-    capitalCity.innerHTML = `<span style="color: #000; font-weight: 900">Capital city</span>: ${data[i].capital}`;
+    capitalCity.innerHTML = `<span style="color: #000; font-weight: 900">Capital city:</span> ${data[i].capital}`;
   }
-  toggle.addEventListener("click", function () {
-    this.classList.toggle("bi-moon");
-    if (this.classList.toggle("bi-brightness-high-fill")) {
-      body.style.background = "white";
-      body.style.color = "black";
-      body.style.transition = "2s";
-    } else {
-      body.style.background = "black";
-      body.style.color = "white";
-      body.style.transition = "2s";
-    }
-  });
 }
 
 const dropdowns = document.querySelectorAll(".dropdown");
@@ -92,9 +78,33 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
+const btn = document.getElementById("checkbox");
+
+btn.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+  // document.body.classList.toggle("dark");
+  // document.div.classList.toggle("dark-theme");
+});
+
 getData();
 
 input.addEventListener("keydown", () => {
   getData();
 });
-// input.addEventListener("keydown", getData);
+
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// --------------------------------------------------------
+
+// toggle.addEventListener("click", function () {
+//   this.classList.toggle("bi-moon");
+//   if (this.classList.toggle("bi-brightness-high-fill")) {
+//     body.style.background = "hsl(0, 0%, 98%)";
+//     body.style.color = "black";
+//     body.style.transition = "2s";
+//   } else {
+//     body.style.background = "black";
+//     body.style.color = "hsl(0, 0%, 98%)";
+//     body.style.transition = "2s";
+//   }
+// });
