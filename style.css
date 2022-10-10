@@ -41,7 +41,6 @@ body {
   justify-content: space-between;
   align-items: center;
   max-width: 90vw;
-  /* margin: 10px 38px 20px 38px; */
   margin: 30px auto;
 }
 #search {
@@ -111,11 +110,8 @@ img {
 }
 .dropdown {
   height: 60%;
-  /* width: 100%; */
   min-width: 12em;
-  /* margin: 0 30px; */
   position: relative;
-  /* margin: 1em; */
 }
 .dropdown * {
   box-sizing: border-box;
@@ -142,7 +138,6 @@ img {
   box-shadow: 0 0 0.8em lightgray;
 }
 .select:hover {
-  /* background-color: #323741; */
   background-color: lightgrey;
 }
 .caret {
@@ -184,7 +179,6 @@ img {
   background: darkgray;
 }
 .active {
-  /* background: #23242a; */
   background: lightgray;
 }
 .menu-open {
