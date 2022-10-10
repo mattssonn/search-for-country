@@ -82,8 +82,6 @@ const btn = document.getElementById("checkbox");
 
 btn.addEventListener("click", function () {
   document.body.classList.toggle("dark-theme");
-  // document.body.classList.toggle("dark");
-  // document.div.classList.toggle("dark-theme");
 });
 
 getData();
@@ -91,20 +89,3 @@ getData();
 input.addEventListener("keydown", () => {
   getData();
 });
-
-// ---------------------------------------------------------
-// ---------------------------------------------------------
-// --------------------------------------------------------
-
-// toggle.addEventListener("click", function () {
-//   this.classList.toggle("bi-moon");
-//   if (this.classList.toggle("bi-brightness-high-fill")) {
-//     body.style.background = "hsl(0, 0%, 98%)";
-//     body.style.color = "black";
-//     body.style.transition = "2s";
-//   } else {
-//     body.style.background = "black";
-//     body.style.color = "hsl(0, 0%, 98%)";
-//     body.style.transition = "2s";
-//   }
-// });
